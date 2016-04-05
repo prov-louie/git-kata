@@ -67,6 +67,7 @@ reenter the git message
 ### Kata 5 - Squashing commits with history overwrite
 See Kata 4.
 ```
+git rebase -i HEAD~4
 git push -f
 ```
 

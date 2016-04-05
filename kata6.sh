@@ -14,15 +14,12 @@ GOAL:
 LEARNINGS:
 - Common git workflow"
 
-appendToFile src/app.js "Old MACDONALD had a farm"
-appendToFile src/app.js "E-I-E-I-O"
+commitChange src/app.js "Old MACDONALD had a farm" "Farm"
+commitChange src/app.js "E-I-E-I-O" "eio"
 
-appendToFile src/run.sh "test *.js"
-
-appendToFile src/conf.js "{ip: 10.1.20.4}"
+commitChange src/conf.js "{api_endpoint: 10.1.20.4}" "conf"
 pushChanges
 
 appendToFile src/app.js "And on his farm he had a cow"
 appendToFile src/app.js "E-I-E-I-O"
-editFile src/conf.js "{ip: localhost}"
-editFile src/run.js "test app.js"
+editFile src/conf.js "{api_endpoint: localhost}"

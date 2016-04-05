@@ -56,7 +56,8 @@ editFile() {
 
 commitChangeWithOutput() {
   appendToFile "$1" "$2"
-  git commit -am "$3"
+  git add "$1"
+  git commit -m "$3"
 }
 
 commitChange() {

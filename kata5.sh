@@ -19,7 +19,8 @@ GOAL:
 
 LEARNINGS:
 - Squashing
-- Keeping 'clean history'"
+- Keeping 'clean history'
+- Overwriting history"
 
 commitChange src/app.js "Old MACDONALD had a farm" "commit 1"
 commitChange src/app.js "E-I-E-I-O" "commit 2"
