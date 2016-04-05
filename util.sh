@@ -9,7 +9,7 @@ resetRepoWithOutput() {
 }
 
 resetRepo() {
-  echo "Resetting repo"
+  echo "Resetting state"
   resetRepoWithOutput > /dev/null 2>&1
 }
 
@@ -26,7 +26,6 @@ setupJohnnyWithOutput() {
 }
 
 setupJohnny() {
-  echo "Setting up Johnny"
   setupJohnnyWithOutput > /dev/null 2>&1
 }
 
