@@ -13,7 +13,7 @@
 ## How it works
 Each kata exposes you to a different scenario. Johnny is an imaginary developer that makes changes to simulate real life collaboration. You'll occasionally run into commit conflicts with him.
 
-If you run into trouble you can just re run the kata and it should reset the world.
+If you run into trouble you can just re run the kata and it will reset the world.
 
 ## Command reference
 
