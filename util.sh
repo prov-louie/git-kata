@@ -14,6 +14,7 @@ resetRepoWithOutput() {
 resetRepo() {
   echo "Resetting state"
   resetRepoWithOutput > /dev/null 2>&1
+  clear
 }
 
 setupJohnnyWithOutput() {
