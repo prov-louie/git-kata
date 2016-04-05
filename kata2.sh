@@ -16,9 +16,8 @@ GOAL:
 - Commit and push the resolving commit
 
 LEARNINGS:
-- Resolving conflicts with a merge commit"
+- Resolving conflicts with a merge commit
+- Notice the resolving commit"
 
-
-commitWithJohnny "there is not limit" src/app.js "Johnny's commit"
-editFile "sky is the limit"
-editFile "sky is the limit"
+commitWithJohnny src/app.js "there is not limit" "Johnny's commit"
+appendToFile src/app.js "sky is the limit"

@@ -63,3 +63,14 @@ To:
 4 f 844674c commit 4
 reenter the git message
 ```
+
+### Kata 5 - Squashing commits with history overwrite
+See Kata 4.
+```
+git push -f
+```
+
+### Kata 6 - Interactive add
+```
+git add -p
+```

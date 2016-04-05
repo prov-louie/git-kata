@@ -15,6 +15,6 @@ GOAL:
 LEARNINGS:
 - Common git workflow"
 
-commitWithJohnny "I am johnny 5" src/johnny.js "Johnny's commit"
-editFile "sky is the limit"
-editFile "sky is the limit"
+commitWithJohnny src/johnny.js "I am johnny 5" "Johnny's commit"
+appendToFile src/app.js "Old MACDONALD had a farm"
+appendToFile src/app.js "E-I-E-I-O"

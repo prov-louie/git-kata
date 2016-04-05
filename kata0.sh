@@ -17,4 +17,4 @@ GOAL:
 LEARNINGS:
 - Typical git 'status' commands"
 
-commitChange "Old MACDONALD had a farm" "commit 1"
+commitChange src/app.js "Old MACDONALD had a farm" "Initial commit"

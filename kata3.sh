@@ -15,7 +15,8 @@ GOAL:
 - Resolve conflicts in whatever way
 
 LEARNINGS:
-- Resolving conflicts with a rebase"
+- Resolving conflicts with a rebase
+- Notice the no resolving commit"
 
-commitWithJohnny "there is not limit" src/app.js "Johnny's commit"
-editFile "sky is the limit"
+commitWithJohnny src/app.js "there is not limit" "Johnny's commit"
+appendToFile src/app.js "sky is the limit"

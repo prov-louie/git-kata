@@ -5,7 +5,7 @@ resetRepoWithOutput() {
   git config push.default simple
   rm -rf src
   mkdir src
-  echo "Hello world" > src/app.js
+  touch src/app.js
   git add ./src
   git commit --amend -m "Add app.js"
   git push -f
@@ -34,7 +34,7 @@ setupJohnny() {
 
 commitWithJohnnyWithOutput() {
   cd .johnny
-  echo "$1" > "$2"
+  echo "$2" > "$1"
   git add .
   git commit -m "$3"
   git push
@@ -45,21 +45,21 @@ commitWithJohnny() {
   commitWithJohnnyWithOutput "$1" "$2" "$3"> /dev/null 2>&1
 }
 
-editFileWithOutput() {
-  echo "$1" >> src/app.js
+appendToFile() {
+  echo "$2" >> "$1"
 }
 
 editFile() {
-  editFileWithOutput "$1" > /dev/null 2>&1
+  echo "$2" > "$1"
 }
 
 commitChangeWithOutput() {
-  editFile "$1"
-  git commit -am "$2"
+  appendToFile "$1" "$2"
+  git commit -am "$3"
 }
 
 commitChange() {
-  commitChangeWithOutput "$1" "$2" > /dev/null 2>&1
+  commitChangeWithOutput "$1" "$2" "$3" > /dev/null 2>&1
 }
 
 pushChangesWithOutput() {
