@@ -8,5 +8,5 @@ echo "SCENARIO DESCRIPTION"
 echo "You made local changes to some files. Pull remote
 changes without committing your local changes"
 
-commitWithJohnny "I am johnny 5" src/johnny.js "Johnny's commit" > /dev/null 2>&1
-editFile "sky is the limit" > /dev/null 2>&1
+commitWithJohnny "I am johnny 5" src/johnny.js "Johnny's commit"
+editFile "sky is the limit"

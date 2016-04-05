@@ -1,4 +1,5 @@
-resetRepo() {
+resetRepoWithOutput() {
+  git config push.default simple
   rm -rf src
   mkdir src
   echo "Hello world" > src/app.js
@@ -7,7 +8,12 @@ resetRepo() {
   git push -f
 }
 
-setupJohnny() {
+resetRepo() {
+  echo "Resetting repo"
+  resetRepoWithOutput > /dev/null 2>&1
+}
+
+setupJohnnyWithOutput() {
   rm -rf .johnny
   mkdir .johnny
   cp -r .git .johnny
@@ -19,33 +25,48 @@ setupJohnny() {
   cd ..
 }
 
-commitWithJohnny() {
+setupJohnny() {
+  echo "Setting up Johnny"
+  setupJohnnyWithOutput > /dev/null 2>&1
+}
+
+commitWithJohnnyWithOutput() {
   cd .johnny
-  echo $1 > $2
+  echo "$1" > "$2"
   git add .
   git commit -m "$3"
   git push
   cd ..
 }
 
+commitWithJohnny() {
+  commitWithJohnnyWithOutput "$1" "$2" "$3"> /dev/null 2>&1
+}
 
-editFile() {
+editFileWithOutput() {
   echo "$1" >> src/app.js
 }
 
-commitChange() {
+editFile() {
+  editFileWithOutput "$1" > /dev/null 2>&1
+}
+
+commitChangeWithOutput() {
   editFile "$1"
   git commit -am "$2"
 }
 
-pushChanges() {
+commitChange() {
+  commitChangeWithOutput "$1" "$2" > /dev/null 2>&1
+}
+
+pushChangesWithOutput() {
   git push
 }
 
-echo "Resetting repo"
-resetRepo > /dev/null 2>&1
+pushChanges() {
+  pushChangesWithOutput > /dev/null 2>&1
+}
 
-echo "Setting up Johnny"
-setupJohnny > /dev/null 2>&1
-
-git config push.default simple
+resetRepo
+setupJohnny
