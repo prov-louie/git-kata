@@ -2,4 +2,4 @@
 
 echo "Welcome to Git Katas"
 echo ""
-echo "To start with the first kata, run ./kata1.sh"
+echo "To start with the first kata, run ./kata0.sh"
