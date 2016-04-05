@@ -1,10 +1,13 @@
 resetRepoWithOutput() {
+  git reset 829ceefc19d4e19e5cfff808d362ae1a14180674
+  git add .
+  git commit --amend -m "Git Katas"
   git config push.default simple
   rm -rf src
   mkdir src
   echo "Hello world" > src/app.js
   git add ./src
-  git commit -m "Resetting repo"
+  git commit --amend -m "Add app.js"
   git push -f
 }
 
